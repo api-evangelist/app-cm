@@ -1,0 +1,15 @@
+generated: '2026-07-17'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: app-cm.co.jp
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep  8 04:45:40 2026 GMT
+  hsts: false
+domains:
+- domain: app-cm.co.jp
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: false

@@ -1,7 +1,24 @@
 aid: app-cm
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/app-cm.png
 name: App-CM
-description: App-CM is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: 'App-CM, Inc. (株式会社アップシーエム) is a Tokyo-based technology company that
+  operates a proprietary video-advertising delivery platform for smartphones, using in-house
+  compression, delivery, and targeting-algorithm technology to serve video ads smoothly in
+  mobile environments. App-CM also develops and publishes consumer mobile apps including
+  FriendQuiz, SunQ, and Shakin. The company is backed by 500 Global and is profiled in the
+  API Evangelist network. It publishes no public API, developer portal, SDK, or machine-readable
+  specifications at this time; this profile captures its identity and domain-security posture.'
 url: https://raw.githubusercontent.com/api-evangelist/app-cm/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -14,6 +31,13 @@ created: '2026-07-17'
 modified: '2026-07-17'
 tags:
 - Company
+- Advertising
+- Video Advertising
+- AdTech
+- Mobile
+- Consumer Apps
+- Platform
+- Japan
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +45,14 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/app-cm-domain-security.yml
 - type: Website
   url: https://app-cm.co.jp
+- type: Support
+  url: https://www.app-cm.co.jp/contact/
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
