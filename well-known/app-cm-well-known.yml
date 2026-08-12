@@ -1,8 +1,12 @@
-generated: '2026-07-17'
-method: searched
-source: live probes of https://app-cm.co.jp
+generated: '2026-08-12'
+method: probed
+source: live HTTP probes of https://app-cm.co.jp and https://www.app-cm.co.jp
 host: https://app-cm.co.jp
-# No .well-known discovery documents are published. Recorded for audit / idempotent re-runs.
+# NO .well-known discovery document is published on either host. Every path below
+# returned a genuine Apache 404 (text/html, 153 bytes) — this is NOT an SPA catch-all
+# answering 200 for everything, so the absences are real and recorded for audit /
+# idempotent re-runs. No WellKnown, SecurityTxt or AgentCard pointer is emitted,
+# because a recorded absence must never be published as a presence.
 documents:
 - path: /.well-known/security.txt
   status: 404
@@ -10,7 +14,20 @@ documents:
   status: 404
 - path: /.well-known/oauth-authorization-server
   status: 404
+- path: /.well-known/oauth-protected-resource
+  status: 404
 - path: /.well-known/api-catalog
   status: 404
 - path: /.well-known/ai-plugin.json
   status: 404
+- path: /.well-known/agent-card.json
+  status: 404
+- path: /.well-known/agent.json
+  status: 404
+- path: /.well-known/mcp.json
+  status: 404
+hosts_probed:
+- host: https://app-cm.co.jp
+  all_404: true
+- host: https://www.app-cm.co.jp
+  all_404: true

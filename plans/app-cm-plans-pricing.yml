@@ -1,0 +1,33 @@
+generated: '2026-08-12'
+method: searched
+source: https://www.app-cm.co.jp/faq/
+# App-CM publishes NO pricing page and NO plan tiers on either the publisher
+# (media.html) or the advertiser (ad.html) side. Both service pages end in a CONTACT
+# call-to-action. The site was walked in full via its sitemap — there is no /pricing,
+# /plans, or 料金 page. The FAQ publishes billing TERMS but never a rate, a CPM, a
+# revenue share, or a tier, so there is nothing to record as a plan.
+plan_count: 0
+plans: []
+model:
+  publisher_side: impression-based revenue share (インプレッション報酬型)
+  advertiser_side: packaged audience buys (girls / homemaker / mens / IT / entertainment /
+    news / sports / major), customizable on request
+  rates_published: false
+billing_terms:
+  # Published in the FAQ; these are payment terms, not a price.
+  cycle: month-end close, paid end of the following month (月末締め翌月末払い)
+  invoice: issued by the 5th business day of each month
+  source: https://www.app-cm.co.jp/faq/
+pages_probed:
+- url: https://www.app-cm.co.jp/service/media.html
+  status: 200
+  pricing_found: false
+- url: https://www.app-cm.co.jp/service/ad.html
+  status: 200
+  pricing_found: false
+- url: https://www.app-cm.co.jp/faq/
+  status: 200
+  pricing_found: false
+note: >-
+  Enterprise "contact us" only — every commercial term is negotiated through the sales
+  contact form. plan_count is an honest zero, not an unchecked field.

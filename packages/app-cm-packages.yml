@@ -1,0 +1,42 @@
+generated: '2026-08-12'
+method: searched
+source: https://www.app-cm.co.jp/faq/
+# App-CM DOES ship a client SDK — the FAQ states that publishers integrate the video ad
+# unit into iOS/Android apps via SDK ("媒体社様はSDKによる実装が可能です"), and that a
+# publisher who has already built their own video ad system can serve App-CM inventory
+# WITHOUT the SDK. But the SDK is not publicly distributed: there is no download link, no
+# developer portal, and no package in any public registry. The only documented route is the
+# contact form, after which a sales rep opens an account. So this file records a real,
+# marketed SDK that no integrator can obtain or evaluate without a sales conversation.
+package_count: 0
+packages: []
+registries_searched:
+- registry: npm
+  query: app-cm
+  result: no first-party package
+- registry: pypi
+  query: app-cm
+  status: 404
+  result: no first-party package
+- registry: cocoapods
+  query: AppCM / App-CM
+  status: 404
+  result: no first-party pod (this is where an iOS ad SDK would normally live)
+- registry: maven-central
+  query: app-cm
+  result: no first-party artifact (this is where an Android ad SDK would normally live)
+- registry: github
+  query: app-cm organization / repositories
+  result: no first-party organization or public repository identified
+undistributed_sdk:
+  exists: true
+  platforms:
+  - ios
+  - android
+  distribution: sales-gated
+  evidence: https://www.app-cm.co.jp/faq/
+  note: >-
+    Publisher-side video ad SDK. Acquired by contacting sales; no public artifact,
+    version, or changelog exists, so no version/published currency can be recorded.
+  version: null
+  published: null

@@ -1,0 +1,67 @@
+# App-CM, Inc. (株式会社アップシーエム)
+
+> Tokyo-based operator of App-CM, a proprietary smartphone video-advertising delivery
+> platform. Uses in-house video compression, a delivery system, and a targeting
+> algorithm to play video advertising smoothly in mobile environments. Also develops
+> and publishes consumer mobile apps (FriendQuiz, SunQ, Shakin). Backed by 500 Global.
+
+## What an agent should know first
+
+App-CM publishes **no public API, no developer portal, no machine-readable specification,
+and no publicly distributed SDK**. A publisher-side iOS/Android video ad SDK does exist —
+the FAQ says publishers integrate the ad unit via SDK, and that a publisher running its own
+video ad system can serve App-CM inventory without it — but it is obtained only by
+contacting sales. There is no reference to read, no spec to fetch, and no package in npm,
+PyPI, CocoaPods, Maven Central, or a public GitHub organization.
+
+Do not attempt to construct API calls against app-cm.co.jp. No API host exists:
+`api.app-cm.co.jp`, `developer.app-cm.co.jp`, `docs.app-cm.co.jp` and `sdk.app-cm.co.jp`
+do not resolve in DNS, and `/openapi.json`, `/swagger.json`, `/api-docs`, `/docs` and
+`/llms.txt` all return 404 on the corporate host. Every `/.well-known/` discovery path
+(security.txt, openid-configuration, oauth-authorization-server, api-catalog,
+ai-plugin.json, agent-card.json, agent.json) returns 404.
+
+The correct action for any integration intent is to use the contact form.
+
+## Services
+
+- [App-CM for publishers](https://www.app-cm.co.jp/service/media.html): impression-based
+  monetization for iOS/Android apps. Two ad formats — interstitial (320x250) and movie
+  feed (in-feed / rectangle, min 200px wide, 16:9).
+- [App-CM for advertisers and agencies](https://www.app-cm.co.jp/service/ad.html):
+  auto-play in-view video with viewable-impression guarantee, delivered across a curated
+  network of apps with 1M+ downloads and mobile media with 1M+ monthly pageviews.
+  Packaged audience buys plus brand-lift measurement (patent pending) and post-campaign
+  effectiveness reporting.
+
+## Company
+
+- [About / corporate information](https://www.app-cm.co.jp/about/): 株式会社アップシーエム,
+  representative director 大塚 淳史, Bunkyo-ku, Tokyo.
+- [FAQ](https://www.app-cm.co.jp/faq/): the only page describing the SDK integration path
+  and the billing terms.
+- [Contact](https://www.app-cm.co.jp/contact/): the single entry point for publisher
+  onboarding, advertiser buys, and SDK access.
+
+## Legal
+
+- [Terms of use (利用規約)](https://www.app-cm.co.jp/terms/) — Japanese and English
+  versions; the service is stated as not intended for EU/EEA users.
+- [Privacy policy (プライバシーポリシー)](https://www.app-cm.co.jp/privacy/)
+
+## Consumer apps
+
+- [App-CM, Inc. on the App Store](https://apps.apple.com/jp/developer/app-cm-inc/id1142951364)
+
+## API Evangelist profile
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/app-cm/refs/heads/main/apis.yml)
+- [Domain security probe](https://raw.githubusercontent.com/api-evangelist/app-cm/refs/heads/main/security/app-cm-domain-security.yml)
+- [.well-known probe](https://raw.githubusercontent.com/api-evangelist/app-cm/refs/heads/main/well-known/app-cm-well-known.yml)
+- [Package / SDK search](https://raw.githubusercontent.com/api-evangelist/app-cm/refs/heads/main/packages/app-cm-packages.yml)
+- [Plans and pricing](https://raw.githubusercontent.com/api-evangelist/app-cm/refs/heads/main/plans/app-cm-plans-pricing.yml)
+
+---
+generated: 2026-08-12
+method: generated
+source: apis.yml + live probes of app-cm.co.jp (no /llms.txt is published — 404)

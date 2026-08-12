@@ -46,4 +46,4 @@ App-CM, Inc. (株式会社アップシーエム) is a Tokyo-based technology com
 
 Backed by: 500 Global — https://app-cm.co.jp
 
-The company publishes no public API, developer portal, SDK, or machine-readable specifications at this time. This profile captures its identity and domain-security posture in the API Evangelist network.
+App-CM ships a publisher-side iOS/Android video ad SDK — its FAQ states that media companies integrate the ad unit via SDK, and that a publisher already running its own video ad system can serve App-CM inventory without it — but the SDK is distributed only through a sales conversation. There is no public API, developer portal, SDK download, package-registry release, or machine-readable specification, and every `/.well-known/` discovery path returns 404. This profile captures its identity, commercial model, and security posture in the API Evangelist network.

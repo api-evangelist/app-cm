@@ -17,8 +17,10 @@ description: 'App-CM, Inc. (株式会社アップシーエム) is a Tokyo-based 
   compression, delivery, and targeting-algorithm technology to serve video ads smoothly in
   mobile environments. App-CM also develops and publishes consumer mobile apps including
   FriendQuiz, SunQ, and Shakin. The company is backed by 500 Global and is profiled in the
-  API Evangelist network. It publishes no public API, developer portal, SDK, or machine-readable
-  specifications at this time; this profile captures its identity and domain-security posture.'
+  API Evangelist network. It ships a publisher-side iOS/Android video ad SDK, but distributes
+  it only through a sales conversation: there is no public API, developer portal, SDK download,
+  package-registry release, or machine-readable specification, and every /.well-known/ discovery
+  path returns 404. This profile captures its identity, commercial model, and security posture.'
 url: https://raw.githubusercontent.com/api-evangelist/app-cm/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -28,7 +30,7 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-08-12'
 tags:
 - Company
 - Advertising
@@ -51,8 +53,36 @@ common:
   url: https://app-cm.co.jp
 - type: Support
   url: https://www.app-cm.co.jp/contact/
+- type: TermsOfService
+  url: https://www.app-cm.co.jp/terms/
+- type: PrivacyPolicy
+  url: https://www.app-cm.co.jp/privacy/
+- type: Packages
+  url: packages/app-cm-packages.yml
+- type: Plans
+  url: plans/app-cm-plans-pricing.yml
+- type: LLMsTxt
+  url: llms/app-cm-llms.txt
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
+  date: '2026-08-12'
+  status: minimal
+  artifacts_added: 3
   pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+x-coverage:
+  state: gated
+  reason: sales-gate
+  detail: >-
+    App-CM markets an iOS/Android publisher SDK — the FAQ states publishers integrate the
+    video ad unit via SDK — but the only documented way to obtain it is the contact form,
+    after which a sales rep opens an account; there is no developer portal, no download,
+    no reference, and no package in npm/PyPI/CocoaPods/Maven Central.
+  evidence:
+  - url: https://www.app-cm.co.jp/faq/
+    status: 200
+  - url: https://www.app-cm.co.jp/contact/
+    status: 200
+  - url: https://app-cm.co.jp/openapi.json
+    status: 404
+  - url: https://app-cm.co.jp/.well-known/agent-card.json
+    status: 404
+  checked: '2026-08-12'
